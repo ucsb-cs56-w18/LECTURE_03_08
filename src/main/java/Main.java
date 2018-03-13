@@ -22,6 +22,18 @@ public class Main {
 		System.out.println("Sorted by Name:");
 		roster.sort( (s1,s2) -> s1.getName().compareTo(s2.getName()) );
 		System.out.println(roster);
+		
+		/* Line 23 above is short for:
+
+                roster.sort(
+		   new Comparator() {
+                       public int compare(Student s1, Student s2) { 
+                         return s1.getName().compareTo(s2.getName()); 
+                       }   
+                   }
+                );
+	      
+                */
 
 		System.out.println("Sorted by Perm, more simply:");
 		roster.sort( (s1,s2) -> Integer.compare( s1.getPerm(), s2.getPerm() ) );
